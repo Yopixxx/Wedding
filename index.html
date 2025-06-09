@@ -2,55 +2,72 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitación de Boda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación de Boda - Emmanuel y Danahí</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background: #fefefe;
-      color: #333;
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      color: #444;
       text-align: center;
       padding: 2rem;
     }
 
     h1 {
-      color: #b48a78;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      color: #b85c76;
+      margin-bottom: 0.5rem;
     }
 
-    p {
-      font-size: 1.2rem;
-      margin: 1rem 0;
+    h2 {
+      font-size: 2rem;
+      color: #555;
+      margin-top: 0;
     }
 
-    .button {
-      background-color: #b48a78;
-      color: white;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      display: inline-block;
+    .date,
+    .location {
       margin-top: 2rem;
+      font-size: 1.5rem;
     }
 
-    .button:hover {
-      background-color: #9e7667;
+    .location {
+      margin-bottom: 3rem;
+    }
+
+    .footer {
+      font-size: 1rem;
+      color: #777;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2, .date, .location {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>¡Nos casamos!</h1>
-  <p><strong>Valeria & Esteban</strong></p>
+  <h1>Emmanuel & Danahí</h1>
+  <h2>¡Nos casamos!</h2>
 
-  <p>Tenemos el honor de invitarte a celebrar nuestro matrimonio.</p>
+  <div class="date">
+    📅 <strong>19 de Julio de 2025</strong>
+  </div>
 
-  <p><strong>📅 Fecha:</strong> Sábado, 30 de noviembre de 2025</p>
-  <p><strong>🕒 Hora:</strong> 4:00 p.m.</p>
-  <p><strong>📍 Lugar:</strong> Hacienda El Encanto, Lima, Perú</p>
+  <div class="location">
+    📍 <strong>Iglesia Anglicana El Buen Pastor</strong><br />
+    Av. Sta. Cruz 491, Miraflores 15074
+  </div>
 
-  <p>"El amor todo lo puede, todo lo cree, todo lo espera, todo lo soporta." <br><em>1 Corintios 13:7</em></p>
-
-  <a href="#" class="button">Ver ubicación</a>
+  <div class="footer">
+    Gracias por ser parte de este momento tan especial ✨
+  </div>
 </body>
 </html>
