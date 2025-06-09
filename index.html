@@ -1,73 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitación de Boda - Emmanuel y Danahí</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      padding: 0;
+      font-family: 'Cormorant Garamond', serif;
+      background-color: #ffffff;
       color: #444;
       text-align: center;
-      padding: 2rem;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    h1, h2 {
+      margin: 0.5rem 0;
     }
 
     h1 {
       font-size: 3rem;
-      color: #b85c76;
-      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #222;
     }
 
     h2 {
       font-size: 2rem;
-      color: #555;
-      margin-top: 0;
+      font-weight: 400;
+      color: #666;
     }
 
-    .date,
-    .location {
-      margin-top: 2rem;
+    .countdown {
       font-size: 1.5rem;
+      margin-top: 1rem;
     }
 
-    .location {
-      margin-bottom: 3rem;
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #222;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+
+    .checkboxes {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
     }
 
     .footer {
-      font-size: 1rem;
-      color: #777;
-      margin-top: 4rem;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .dress-image {
+    width: 200px; /* Puedes ajustar a 150px, 300px, etc. */
+    height: auto; /* Mantiene proporciones */
+    display: block;
+    margin: 0 auto; /* Centrar horizontalmente */
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      h2, .date, .location {
-        font-size: 1.2rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <h1>Emmanuel & Danahí</h1>
-  <h2>¡Nos casamos!</h2>
+  <!-- Invitación -->
+  <section>
+    <h1>Estás invitado</h1>
+    <h2>Con mucho amor, te invitamos a celebrar nuestra boda</h2>
+    <div class="countdown" id="countdown"></div>
+  </section>
 
-  <div class="date">
-    📅 <strong>19 de Julio de 2025</strong>
-  </div>
+  <!-- Ceremonia -->
+  <section>
+    <h2>CEREMONIA</h2>
+    <p>Te esperamos el:</p>
+    <p><strong>19 Julio | 7:00 pm</strong></p>
+    <p>Iglesia Anglicana el Buen Pastor</p>
+    <a class="button" href="https://www.google.com/maps/place/Catedral+Anglicana+del+Buen+Pastor/@-12.1077479,-77.0352907,18z/data=!4m6!3m5!1s0x9105c8400bbac97b:0xe31c83c887391f17!8m2!3d-12.1078778!4d-77.0346562!16s%2Fg%2F1tg7t211?entry=ttu" target="_blank">Ver ubicación</a>
+  </section>
 
-  <div class="location">
-    📍 <strong>Iglesia Anglicana El Buen Pastor</strong><br />
-    Av. Sta. Cruz 491, Miraflores 15074
-  </div>
+  <!-- Dress Code -->
+  <section>
+    <h2>DRESS CODE</h2>
+    <p>¡Luce tu mejor look!</p>
+    <p><strong>Formal</strong></p>
+    <img src="assets/trajes.png" alt="Código de vestimenta" class="dress-image">
+  </section>
 
-  <div class="footer">
-    Gracias por ser parte de este momento tan especial ✨
-  </div>
+  <!-- Regalos -->
+  <section>
+    <h2>REGALOS</h2>
+    <p>Lo más importante es tu presencia, pero si deseas hacernos un regalo aquí tienes nuestros datos:</p>
+    <a class="button" href="#">Ver lista de regalos</a> <!-- reemplazar cuando tengas el link -->
+  </section>
+
+  <!-- Confirmar asistencia -->
+  <section>
+    <h2>CONFIRMAR ASISTENCIA</h2>
+    <p>Por favor confirma tu asistencia antes del <strong>05/07</strong>. El aforo es limitado.</p>
+    <form name="rsvp">
+      <div class="checkboxes">
+        <label><input type="radio" name="asistencia" value="Sí"> Sí, estaré</label>
+        <label><input type="radio" name="asistencia" value="No"> No podré asistir</label>
+      </div>
+      <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
+      <input type="text" name="cancion" placeholder="¿Qué canción no puede faltar?">
+      <textarea name="mensaje" placeholder="Mensaje para los novios"></textarea>
+      <button type="submit" class="button">Enviar respuesta</button>
+    </form>
+    <p>Te esperamos con mucho cariño,<br><strong>Emmanuel y Danahí</strong></p>
+  </section>
+
+  <div class="footer">© 2025 Emmanuel & Danahí</div>
+
+  <script>
+    // Cuenta regresiva
+    const countdown = document.getElementById('countdown');
+    const weddingDate = new Date('2025-07-19T19:00:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = weddingDate - now;
+      if (diff <= 0) {
+        countdown.innerHTML = "¡Ya es el gran día!";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdown.innerHTML = `${days} días ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
