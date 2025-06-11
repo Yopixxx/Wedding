@@ -1,112 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Invitación de Boda - Emmanuel y Danahí</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Cormorant Garamond', serif;
-      background-color: #ffffff;
-      color: #444;
-      text-align: center;
-    }
-
-    section {
-      padding: 4rem 2rem;
-      border-bottom: 1px solid #eee;
-    }
-
-    h1, h2 {
-      margin: 0.5rem 0;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 600;
-      color: #222;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 400;
-      color: #666;
-    }
-
-    .countdown {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #222;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 1rem;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      max-width: 400px;
-      margin: auto;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-family: inherit;
-    }
-
-    .checkboxes {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .footer {
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-    .dress-image {
-    width: 200px; /* Puedes ajustar a 150px, 300px, etc. */
-    height: auto; /* Mantiene proporciones */
-    display: block;
-    margin: 0 auto; /* Centrar horizontalmente */
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Invitación -->
-  <section>
-    <h1>Estás invitado</h1>
-    <h2>Con mucho amor, te invitamos a celebrar nuestra boda</h2>
-    <div class="countdown" id="countdown"></div>
+
+  <!-- Hero / Portada -->
+  <section class="hero section">
+    <div class="hero-overlay">
+      <h1 class="main-names">Emmanuel & Danahí</h1>
+      <h1>Estás invitado</h1>
+      <p class="intro">Nos encantaría que seas parte de este momento tan especial para nosotros. ¡Falta muy poco!</p>
+      <div id="countdown"></div>
+    </div>
   </section>
 
   <!-- Ceremonia -->
   <section>
     <h2>CEREMONIA</h2>
     <p>Te esperamos el:</p>
-    <p><strong>19 Julio | 7:00 pm</strong></p>
+    <p><strong>19 Julio | 6:00 pm</strong></p>
+    <p>Ingreso desde las 6:30 pm — Hora estricta de inicio: 7:00 pm</p>
     <p>Iglesia Anglicana el Buen Pastor</p>
     <a class="button" href="https://www.google.com/maps/place/Catedral+Anglicana+del+Buen+Pastor/@-12.1077479,-77.0352907,18z/data=!4m6!3m5!1s0x9105c8400bbac97b:0xe31c83c887391f17!8m2!3d-12.1078778!4d-77.0346562!16s%2Fg%2F1tg7t211?entry=ttu" target="_blank">Ver ubicación</a>
   </section>
@@ -122,28 +40,27 @@
   <!-- Regalos -->
   <section>
     <h2>REGALOS</h2>
-    <p>Lo más importante es tu presencia, pero si deseas hacernos un regalo aquí tienes nuestros datos:</p>
-    <a class="button" href="#">Ver lista de regalos</a> <!-- reemplazar cuando tengas el link -->
+    <p>Apreciamos y valoramos tu importante presencia en este día tan especial para nosotros.<br>
+    Ahora, amoblar nuestra primera casita correrá por nuestra cuenta, y nuestra cuenta es:</p>
+    <p><strong>YAPE: 926531441<br>CCI: 002 40510604823501695<br>BCP: </strong></p>
+    <p>De todo corazón, muchas gracias¡ El Señor te bendiga muchísimo¡</p>
   </section>
 
-  <!-- Confirmar asistencia -->
-  <section>
-    <h2>CONFIRMAR ASISTENCIA</h2>
-    <p>Por favor confirma tu asistencia antes del <strong>05/07</strong>. El aforo es limitado.</p>
-    <form name="rsvp">
-      <div class="checkboxes">
-        <label><input type="radio" name="asistencia" value="Sí"> Sí, estaré</label>
-        <label><input type="radio" name="asistencia" value="No"> No podré asistir</label>
-      </div>
-      <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
-      <input type="text" name="cancion" placeholder="¿Qué canción no puede faltar?">
-      <textarea name="mensaje" placeholder="Mensaje para los novios"></textarea>
-      <button type="submit" class="button">Enviar respuesta</button>
-    </form>
-    <p>Te esperamos con mucho cariño,<br><strong>Emmanuel y Danahí</strong></p>
-  </section>
+  <<!-- Confirmar asistencia -->
+<section>
+  <h2>CONFIRMAR ASISTENCIA</h2>
+  <p>Por favor confirma tu asistencia antes del <strong>05/07</strong>. El aforo es limitado.</p>
+  <a class="button" href="https://wa.me/51926531441?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Emmanuel%20y%20Danahí.%20😊" target="_blank">
+    Confirmar por WhatsApp
+  </a>
+  <p>Te esperamos con mucho cariño,<br><strong>Emmanuel y Danahí</strong></p>
+</section>
 
-  <div class="footer">© 2025 Emmanuel & Danahí</div>
+  <div class="footer">
+    <p>Te esperamos</p>
+    <h1 class="main-names">Emmanuel & Danahí</h1>
+    © 2025 Emmanuel & Danahí
+  </div>
 
   <script>
     // Cuenta regresiva
@@ -161,7 +78,6 @@
       const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
-
       countdown.innerHTML = `${days} días ${hours}h ${minutes}m ${seconds}s`;
     }
 
@@ -169,3 +85,12 @@
   </script>
 </body>
 </html>
+
+
+
+<!-- al inicio de la portada insertar lettering grande "Emmanuel&Danahí", que sea lo primero que se vea/cambiar foto
+ DETALLE DE MEDIA HR ANTES: INGRESO (6:30 pm/ hora estricta de inicio 7pm) Mejor cambiar hora de inicio a las 6:00 pm/ 
+ REFERENCIA DE LA IGLE/ poner COLOR A LA INVITACIÓN/ PALETA DE COLORES de fondo / cambiar foto de portada/ 
+ Quitar "ver lista de regalos" y poner Numeros de cuenta / al final agregar "Te esperamos"+lettering "Emmanuel&Danahí" 
+ agregar: etiqueta: "aunque nos encantan los niños, este día será de adultos"
+ -->
