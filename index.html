@@ -8,89 +8,70 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Hero / Portada -->
-  <section class="hero section">
-    <div class="hero-overlay">
-      <h1 class="main-names">Emmanuel & Danahí</h1>
-      <h1>Estás invitado</h1>
-      <p class="intro">Nos encantaría que seas parte de este momento tan especial para nosotros. ¡Falta muy poco!</p>
-      <div id="countdown"></div>
-    </div>
-  </section>
-
-  <!-- Ceremonia -->
-  <section>
-    <h2>CEREMONIA</h2>
-    <p>Te esperamos el:</p>
-    <p><strong>19 Julio | 6:00 pm</strong></p>
-    <p>Ingreso desde las 6:30 pm — Hora estricta de inicio: 7:00 pm</p>
-    <p>Iglesia Anglicana el Buen Pastor</p>
-    <a class="button" href="https://www.google.com/maps/place/Catedral+Anglicana+del+Buen+Pastor/@-12.1077479,-77.0352907,18z/data=!4m6!3m5!1s0x9105c8400bbac97b:0xe31c83c887391f17!8m2!3d-12.1078778!4d-77.0346562!16s%2Fg%2F1tg7t211?entry=ttu" target="_blank">Ver ubicación</a>
-  </section>
-
-  <!-- Dress Code -->
-  <section>
-    <h2>DRESS CODE</h2>
-    <p>¡Luce tu mejor look!</p>
-    <p><strong>Formal</strong></p>
-    <img src="assets/trajes.png" alt="Código de vestimenta" class="dress-image">
-  </section>
-
-  <!-- Regalos -->
-  <section>
-    <h2>REGALOS</h2>
-    <p>Apreciamos y valoramos tu importante presencia en este día tan especial para nosotros.<br>
-    Ahora, amoblar nuestra primera casita correrá por nuestra cuenta, y nuestra cuenta es:</p>
-    <p><strong>YAPE: 926531441<br>CCI: 002 40510604823501695<br>BCP: </strong></p>
-    <p>De todo corazón, muchas gracias¡ El Señor te bendiga muchísimo¡</p>
-  </section>
-
-  <<!-- Confirmar asistencia -->
-<section>
-  <h2>CONFIRMAR ASISTENCIA</h2>
-  <p>Por favor confirma tu asistencia antes del <strong>05/07</strong>. El aforo es limitado.</p>
-  <a class="button" href="https://wa.me/51926531441?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Emmanuel%20y%20Danahí.%20😊" target="_blank">
-    Confirmar por WhatsApp
-  </a>
-  <p>Te esperamos con mucho cariño,<br><strong>Emmanuel y Danahí</strong></p>
-</section>
-
-  <div class="footer">
-    <p>Te esperamos</p>
-    <h1 class="main-names">Emmanuel & Danahí</h1>
-    © 2025 Emmanuel & Danahí
-  </div>
-
-  <script>
-    // Cuenta regresiva
-    const countdown = document.getElementById('countdown');
-    const weddingDate = new Date('2025-07-19T19:00:00');
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = weddingDate - now;
-      if (diff <= 0) {
-        countdown.innerHTML = "¡Ya es el gran día!";
-        return;
-      }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-      countdown.innerHTML = `${days} días ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    setInterval(updateCountdown, 1000);
-  </script>
-</body>
-</html>
-
-
-
-<!-- al inicio de la portada insertar lettering grande "Emmanuel&Danahí", que sea lo primero que se vea/cambiar foto
- DETALLE DE MEDIA HR ANTES: INGRESO (6:30 pm/ hora estricta de inicio 7pm) Mejor cambiar hora de inicio a las 6:00 pm/ 
- REFERENCIA DE LA IGLE/ poner COLOR A LA INVITACIÓN/ PALETA DE COLORES de fondo / cambiar foto de portada/ 
- Quitar "ver lista de regalos" y poner Numeros de cuenta / al final agregar "Te esperamos"+lettering "Emmanuel&Danahí" 
- agregar: etiqueta: "aunque nos encantan los niños, este día será de adultos"
+  <div class="container">
+    <!-- Hero / Portada -->
+    <section class="hero section">
+      <div class="hero-overlay">
+        <h1 class="main-names">Emmanuel & Danahí</h1>
+        <h1>Estás invitado</h1>
+        <p class="intro">Nos encantaría que seas parte de este momento tan especial para nosotros. ¡Falta muy poco!</p>
+        <div id="countdown"></div>
+      </div>
+    </section>
+    
+    <!-- Ceremonia -->
+    <section>
+      <h2>CEREMONIA</h2>
+      <p>Te esperamos el:</p>
+      <p><strong>19 Julio | 6:00 pm</strong></p>
+      <p>Ingreso desde las 6:30 pm — Hora estricta de inicio: 7:00 pm</p>
+      <p>Iglesia Anglicana el Buen Pastor</p>
+      <a class="button" href="https://www.google.com/maps/place/Catedral+Anglicana+del+Buen+Pastor/@-12.1077479,-77.0352907,18z/data=!4m6!3m5!1s0x9105c8400bbac97b:0xe31c83c887391f17!8m2!3d-12.1078778!4d-77.0346562!16s%2Fg%2F1tg7t211?entry=ttu" target="_blank">Ver ubicación</a>
+    </section>
+    
+    <!-- Dress Code -->
+    <section>
+      <h2>DRESS CODE</h2>
+      <p><strong>Formal</strong></p>
+      <img src="assets/trajes.png" alt="Código de vestimenta" class="dress-image">
+      <p>¡Luce tu mejor look!</p>
+    </section>
+    
+    <!-- Regalos -->
+    <section>
+      <h2>REGALOS</h2>
+      <p>Apreciamos y valoramos tu importante presencia en este día tan especial para nosotros.<br>
+        Ahora, amoblar nuestra primera casita correrá por nuestra cuenta, y nuestra cuenta es:</p>
+        <p><strong>YAPE: 926531441<br>CCI: 002 40510604823501695<br>BCP: 40506048235016<br>Interbank: 8983380745277</strong></p>
+        <p>De todo corazón, muchas gracias¡</p>
+      </section>
+      
+      <<!-- Confirmar asistencia -->
+      <section>
+        <h2>CONFIRMAR ASISTENCIA</h2>
+        <p>Por favor confirma tu asistencia antes del <strong>05/07</strong>. El aforo es limitado.</p>
+        <a class="button" href="https://wa.me/51926531441?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Emmanuel%20y%20Danahí.%20😊" target="_blank">
+          Confirmar por WhatsApp
+        </a>
+        <p>Te esperamos con mucho cariño,<br><strong>Emmanuel y Danahí</strong></p>
+      </section>
+      
+      <div class="footer">
+        <p>Te esperamos</p>
+        <h1 class="main-names">Emmanuel & Danahí</h1>
+        © 2025 Emmanuel & Danahí
+      </div>
+      
+      <script src="countdown.js"></script>
+      </div>
+  </body>
+  </html>
+    
+    
+    
+    <!-- al inicio de la portada insertar lettering grande "Emmanuel&Danahí", que sea lo primero que se vea/cambiar foto
+    DETALLE DE MEDIA HR ANTES: INGRESO (6:30 pm/ hora estricta de inicio 7pm) Mejor cambiar hora de inicio a las 6:00 pm/ 
+    REFERENCIA DE LA IGLE/ poner COLOR A LA INVITACIÓN/ PALETA DE COLORES de fondo / cambiar foto de portada/ 
+    Quitar "ver lista de regalos" y poner Numeros de cuenta / al final agregar "Te esperamos"+lettering "Emmanuel&Danahí" 
+    agregar: etiqueta: "aunque nos encantan los niños, este día será de adultos"
  -->
