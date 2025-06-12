@@ -110,7 +110,7 @@ input, textarea {
 
 .eyd-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 1000px;
   height: auto;
   display: block;
   margin: 1rem auto;
@@ -122,12 +122,12 @@ input, textarea {
 
 /* HERO */
 .hero {
-  background-image: url('assets/nueva-portada.jpg');
+  background-image: linear-gradient(to bottom, rgba(255, 248, 243, 0), #fff8f3), url('assets/pedidad2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  height: 85vh;
+  height: 70vh;
   color: #222;
   display: flex;
   align-items: center;
