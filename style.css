@@ -43,6 +43,7 @@ h2 {
 .countdown {
   font-size: 1.3rem;
   margin-top: 1rem;
+  color: #222;
 }
 
 .button {
@@ -96,12 +97,20 @@ input, textarea {
   padding: 2rem 1rem;
   font-size: 0.9rem;
   color: #aaa;
-  background-color: #f2e8dc;
+  /* background-color: #f2e8dc; */
 }
 
 .dress-image {
   width: 70%;
   max-width: 240px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.eyd-image {
+  width: 100%;
+  max-width: 500px;
   height: auto;
   display: block;
   margin: 1rem auto;
@@ -118,20 +127,20 @@ input, textarea {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  height: 100vh;
-  color: white;
+  height: 85vh;
+  color: #222;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-.hero::after {
+/* .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), white);
-}
+} */
 
 .hero-overlay {
   position: relative;
