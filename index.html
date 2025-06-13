@@ -20,17 +20,25 @@
       <div>
         <img src="assets/estasinvitado.jpg" class="estasinvitado-image">
         <p class="intro">Nos encantaría que seas parte de este momento tan especial para nosotros. ¡Falta muy poco!</p>
-        <div id="countdown"></div>
+        <div id="countdown">
+        </div>
+        <div id="heart-container"></div>
       </div>
+    </section>
+
+    <!-- Fecha -->
+    <section class="ceremonia-fecha">
+      <p class="mes">JULIO</p>
+      <p class="dia">19</p>
+      <p class="año">2025</p>
     </section>
     
     <!-- Ceremonia -->
     <section>
       <h2>CEREMONIA</h2>
-      <p>Te esperamos el:</p>
-      <p><strong>19 Julio | 6:00 pm</strong></p>
-      <p>Ingreso desde las 6:30 pm — Hora estricta de inicio: 7:00 pm</p>
+      <p>Te esperamos en:</p>
       <p>Iglesia Anglicana el Buen Pastor</p>
+      <p>Hora estricta de inicio: <strong>6:30 pm</strong> </p>
       <a class="button" href="https://www.google.com/maps/place/Catedral+Anglicana+del+Buen+Pastor/@-12.1077479,-77.0352907,18z/data=!4m6!3m5!1s0x9105c8400bbac97b:0xe31c83c887391f17!8m2!3d-12.1078778!4d-77.0346562!16s%2Fg%2F1tg7t211?entry=ttu" target="_blank">Ver ubicación</a>
     </section>
     
@@ -46,10 +54,24 @@
     <section>
       <h2>REGALOS</h2>
       <p>Apreciamos y valoramos tu importante presencia en este día tan especial para nosotros.<br>
-        Ahora, amoblar nuestra primera casita correrá por nuestra cuenta, y nuestra cuenta es:</p>
-        <p><strong>YAPE: 926531441<br>CCI: 002 40510604823501695<br>BCP: 40506048235016<br>Interbank: 8983380745277</strong></p>
-        <p>De todo corazón, muchas gracias¡</p>
-      </section>
+        Ahora, amoblar nuestra primera casita correrá por nuestra cuenta, un apoyo varón(a) ❤️
+      </p>
+
+      <a href="javascript:void(0);" class="button" onclick="mostrarCuentas()">Yape / Plin / Otros</a>
+
+      <div id="cuentas" style="display:none; margin-top: 1rem; font-size: 0.95rem; color: #555;">
+        <p><strong>YAPE:</strong> 926531441</p>
+        <p><strong>CCI:</strong> 002 40510604823501695</p>
+        <p><strong>BCP:</strong> 40506048235016</p>
+        <p><strong>Interbank:</strong> 8983380745277</p>
+      </div>
+
+      <a class="button" href="https://www.falabella.com.pe/falabella-pe/page/lista-de-novios" target="_blank">
+        Ver lista de regalos
+      </a>
+
+      <p style="margin-top: 1rem;">De todo corazón, ¡muchas gracias!</p>
+    </section>
       
       <!-- Confirmar asistencia -->
       <section>
@@ -58,16 +80,25 @@
         <a class="button" href="https://wa.me/51926531441?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Emmanuel%20y%20Danahí.%20😊" target="_blank">
           Confirmar por WhatsApp
         </a>
-        <p>Te esperamos con mucho cariño,<br><strong>Emmanuel y Danahí</strong></p>
       </section>
       
       <div class="footer">
         <p>Te esperamos</p>
-        <h1 class="main-names">Emmanuel & Danahí</h1>
+        <img src="assets/EyD_final.png" alt="Final" class="eyd-final-image">
         © 2025 Emmanuel & Danahí
       </div>
       
       <script src="countdown.js"></script>
+      <script>
+        function mostrarCuentas() {
+          const cuentasDiv = document.getElementById('cuentas');
+          if (cuentasDiv.style.display === 'none') {
+            cuentasDiv.style.display = 'block';
+          } else {
+            cuentasDiv.style.display = 'none';
+          }
+        }
+      </script>
       </div>
   </body>
   </html>

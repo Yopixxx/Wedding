@@ -40,11 +40,112 @@ h2 {
   color: #666;
 }
 
-.countdown {
-    width: 500px; ;
-    font-size: 1.3rem;
-    margin-top: 1rem;
-    color: #222;
+#countdown {
+  font-family: 'Cormorant Garamond', serif; /* ya es sobria y elegante */
+  font-size: 1.8rem; /* aumenta el tamaño */
+  color: #333; /* más elegante que #222 */
+  letter-spacing: 1px;
+  margin-top: 1.5rem;
+}
+#countdown .segundos {
+  color: #dab9b3; /* tono perla suave */
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  transform-origin: center;
+  min-width: 2.5ch; /* espacio fijo para evitar que se desplace */
+}
+
+#countdown .segundos.pulse {
+  transform: scale(1.2);
+}
+
+#heart-container {
+  position: relative;
+  height: 0;
+}
+
+.heart {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #e6a0b3;
+  animation: floatRightCurve 1.2s ease-out forwards;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes floatRightCurve {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, -20px) rotate(-10deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(40px, -50px) rotate(-20deg);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -40px);
+  }
+}
+
+.ceremonia-fecha {
+  position: relative;
+  padding: 4rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff8f3;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ceremonia-fecha::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 150px;
+  background-image: url('assets/ticketdorado.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.ceremonia-fecha .mes {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.ceremonia-fecha .dia {
+  font-size: 5.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.ceremonia-fecha .año {
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .button {
@@ -60,6 +161,20 @@ h2 {
   width: 100%;
   max-width: 300px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#cuentas {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fdf5f1;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 1;
+}
+
+.cuentas-hidden {
+  display: none;
 }
 
 img {
@@ -103,7 +218,7 @@ input, textarea {
 
 .dress-image {
   width: 70%;
-  max-width: 240px;
+  max-width: 100px;
   height: auto;
   display: block;
   margin: 1rem auto;
@@ -122,7 +237,18 @@ input, textarea {
   max-width: 1000px;
   height: auto;
   display: block;
-  margin: 1rem auto;
+  margin: 0.5rem auto 1rem auto;
+  transform: translateY(-20px); /*To move*/
+}
+
+.eyd-final-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto 1rem auto;
+  transform: translateY(-10px) scale(0.500); /* Agranda un poco y ajusta posición */
+
 }
 
 .section {
@@ -163,6 +289,14 @@ input, textarea {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   padding: 0 1rem;
+}
+
+.intro {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+  transform: translateY(-20px); /* esto la sube visualmente */
 }
 
 .main-names {
