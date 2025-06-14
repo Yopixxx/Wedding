@@ -28,7 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const rect = segundos.getBoundingClientRect();
     const heart = document.createElement("div");
     heart.className = "heart";
-    heart.textContent = "❤️";
+    heart.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#dab9b3" viewBox="0 0 16 16">
+<path d="M8 2.748-.717-.737C5.6-.387 4.412.28 3.053 1.392 1.165 2.94.7 5.314 2.25 7.232L8 13l5.75-5.768c1.55-1.918 1.085-4.292-.803-5.84C11.588.28 10.4-.387 8.717 1.07L8 2.748z"/>
+</svg>`;
 
     // Posicionar el corazón donde está el segundero
     heart.style.left = rect.left + window.scrollX + rect.width / 2 + 'px';

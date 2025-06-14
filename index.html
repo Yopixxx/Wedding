@@ -10,13 +10,14 @@
 <body>
   <div class="container">
     <!-- Hero / Portada -->
-    <section class="hero section">
+    <section class="hero section primer-bloque">
       <div class="hero-overlay">
             <img src="assets/EyD_black.jpg" alt="Código de vestimenta" class="eyd-image">
       </div>
     </section>
 
-    <section>
+    <!--Estas invitado-->
+    <section class="fade-in-section">
       <div>
         <img src="assets/estasinvitado.jpg" class="estasinvitado-image">
         <p class="intro">Nos encantaría que seas parte de este momento tan especial para nosotros. ¡Falta muy poco!</p>
@@ -34,16 +35,17 @@
     </section>
     
     <!-- Ceremonia -->
-    <section>
+    <section class="fade-in-section">
       <h2>CEREMONIA</h2>
-      <p>Te esperamos en:</p>
+      <img src="assets/iglesia.png" class="iglesia-image"> 
+      <!-- <p>Te esperamos en:</p> -->
       <p>Iglesia Anglicana el Buen Pastor</p>
-      <p>Hora estricta de inicio: <strong>6:30 pm</strong> </p>
+      <p>Hora de inicio: <strong>6:00 pm</strong> </p>
       <a class="button" href="https://www.google.com/maps/place/Catedral+Anglicana+del+Buen+Pastor/@-12.1077479,-77.0352907,18z/data=!4m6!3m5!1s0x9105c8400bbac97b:0xe31c83c887391f17!8m2!3d-12.1078778!4d-77.0346562!16s%2Fg%2F1tg7t211?entry=ttu" target="_blank">Ver ubicación</a>
     </section>
     
     <!-- Dress Code -->
-    <section>
+    <section class="fade-in-section">
       <h2>DRESS CODE</h2>
       <!-- <p><strong>Formal</strong></p> -->
       <img src="assets/trajes.png" alt="Código de vestimenta" class="dress-image">
@@ -51,17 +53,19 @@
     </section>
     
     <!-- Regalos -->
-    <section>
+    <section class="fade-in-section">
       <h2>REGALOS</h2>
-      <p>Apreciamos y valoramos tu importante presencia en este día tan especial para nosotros.<br>
-        Ahora, amoblar nuestra primera casita correrá por nuestra cuenta, un apoyo varón(a) ❤️
+      <img src="assets/regalo.png" class="regalo-image">
+      <p>
+        Tu presencia es lo más valioso para nosotros,<br>
+        pero si deseas tener un detalle especial,<br>
+        puedes hacerlo a través de los siguientes medios:
       </p>
-
       <a href="javascript:void(0);" class="button" onclick="mostrarCuentas()">Yape / Plin / Otros</a>
 
       <div id="cuentas" style="display:none; margin-top: 1rem; font-size: 0.95rem; color: #555;">
         <p><strong>YAPE:</strong> 926531441</p>
-        <p><strong>CCI:</strong> 002 40510604823501695</p>
+        <p><strong>CCI:</strong> 00240510604823501695</p>
         <p><strong>BCP:</strong> 40506048235016</p>
         <p><strong>Interbank:</strong> 8983380745277</p>
       </div>
@@ -74,7 +78,7 @@
     </section>
       
       <!-- Confirmar asistencia -->
-      <section>
+      <section class="fade-in-section">
         <h2>CONFIRMAR ASISTENCIA</h2>
         <p>Por favor confirma tu asistencia antes del <strong>05/07</strong>. El aforo es limitado.</p>
         <a class="button" href="https://wa.me/51926531441?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Emmanuel%20y%20Danahí.%20😊" target="_blank">
@@ -99,6 +103,25 @@
           }
         }
       </script>
+
+      <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target); // solo una vez
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+          observer.observe(section);
+        });
+      </script>
+
+
       </div>
   </body>
   </html>

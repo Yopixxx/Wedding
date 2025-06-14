@@ -19,9 +19,14 @@ body {
   padding: 1rem;
 }
 
-section {
-  padding: 3rem 1rem;
-  border-bottom: 1px solid #eee;
+/* El bloque grande inicial */
+.primer-bloque {
+  padding: 3rem 1rem; /* Espacio amplio */
+}
+
+/* Todos los demás bloques más compactos */
+section:not(.primer-bloque) {
+  padding: 1.5rem 1rem; /* Menor espacio entre bloques */
 }
 
 h1, h2 {
@@ -68,7 +73,7 @@ h2 {
 .heart {
   position: absolute;
   font-size: 1.5rem;
-  color: #e6a0b3;
+  color: #dab9b3;
   animation: floatRightCurve 1.2s ease-out forwards;
   pointer-events: none;
   z-index: 10;
@@ -117,7 +122,8 @@ h2 {
   left: 50%;
   width: 300px;
   height: 150px;
-  background-image: url('assets/ticketdorado.png');
+  /* background-image: url('assets/ticketdorado.png'); */
+  background-color: #8b5e3c;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -251,6 +257,24 @@ input, textarea {
 
 }
 
+.iglesia-image {
+  width: 70%;
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  opacity: 0.6;
+}
+
+.regalo-image {
+  width: 70%;
+  max-width: 85px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  opacity: 0.6;
+}
+
 .section {
   margin-bottom: 80px;
 }
@@ -311,4 +335,16 @@ input, textarea {
   color: #a00;
   margin-top: 1rem;
   font-weight: 500;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
