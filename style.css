@@ -216,7 +216,7 @@ input, textarea {
 }
 
 .footer {
-  padding: 2rem 1rem;
+  padding: 4px 0;
   font-size: 0.9rem;
   color: #aaa;
   /* background-color: #f2e8dc; */
@@ -252,10 +252,11 @@ input, textarea {
   max-width: 600px;
   height: auto;
   display: block;
-  margin: 0.5rem auto 1rem auto;
+  margin: 0.5rem auto 0.3rem auto;
   transform: translateY(-10px) scale(0.500); /* Agranda un poco y ajusta posición */
 
 }
+
 
 .iglesia-image {
   width: 70%;
@@ -274,6 +275,48 @@ input, textarea {
   margin: 1rem auto;
   opacity: 0.6;
 }
+
+.novios-salida-final {
+  display: block;
+  margin: 5px auto 0 auto;
+  max-width: 35px; /* ajusta el tamaño según necesidad */
+  height: auto;
+  opacity: 0.25;
+}
+
+.esquina-decorada {
+  position: relative;
+  overflow: hidden;
+}
+
+.esquina-decorada::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1150px; /* ajusta a tu gusto */
+  height: 120px;
+  transform: translateY(-100%) rotate(-17deg);
+  background-image: url('assets/olivo2.jpg'); /* o cualquier imagen */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+  opacity: 0.4; /* opcional */
+  z-index: 0;
+}
+
+/* .decoracion-lateral {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-15deg);
+  width: 90px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+ */
+
 
 .section {
   margin-bottom: 80px;
@@ -340,7 +383,7 @@ input, textarea {
 .fade-in-section {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 3.5s ease-out, transform 0.8s ease-out;
   will-change: opacity, transform;
 }
 
