@@ -276,6 +276,25 @@ input, textarea {
   opacity: 0.6;
 }
 
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+.copas-image {
+  animation: latido 2s infinite;
+  transform-origin: center;
+  width: 70%;
+  max-width: 85px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  opacity: 0.6;
+}
+
 .novios-salida-final {
   display: block;
   margin: 5px auto 0 auto;
@@ -305,17 +324,10 @@ input, textarea {
   z-index: 0;
 }
 
-/* .decoracion-lateral {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(-15deg);
-  width: 90px;
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: 0;
+.decoracion-lateral-derecha {
+  opacity: 0.45; /* Ajusta el nivel según lo tenue que lo desees */
 }
- */
+
 
 
 .section {
