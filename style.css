@@ -304,7 +304,6 @@ input, textarea {
 }
 
 .solo-adultos {
-  /* background-color: #f9f6f3; */
   padding: 1.5rem;
   border-radius: 1rem;
   margin-top: 2rem;
@@ -314,7 +313,6 @@ input, textarea {
 .solo-adultos h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
-  color: #6b4e3d;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
 }
