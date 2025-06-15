@@ -303,6 +303,23 @@ input, textarea {
   opacity: 0.25;
 }
 
+.solo-adultos {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.solo-adultos h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.solo-adultos p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
 .esquina-decorada {
   position: relative;
   overflow: hidden;
