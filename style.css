@@ -304,20 +304,19 @@ input, textarea {
 }
 
 .solo-adultos {
+  /* background-color: #f9f6f3; */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
   text-align: center;
-  padding: 2rem 1rem;
-  font-family: 'Cormorant Garamond', serif;
 }
 
 .solo-adultos h2 {
-  font-size: 1.8rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: #6b4e3d;
   margin-bottom: 0.5rem;
-  color: #444;
-}
-
-.solo-adultos p {
-  font-size: 1.1rem;
-  color: #666;
+  letter-spacing: 1px;
 }
 
 .esquina-decorada {
