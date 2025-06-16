@@ -107,15 +107,26 @@
       <p style="margin-top: 1rem;">De todo corazón, ¡muchas gracias!</p>
     </section>
       
-      <!-- Confirmar asistencia -->
+      
       <section class="fade-in-section">
-        <h2>CONFIRMAR ASISTENCIA</h2>
-        <img src="assets/copas.jpg" class="copas-image">
-        <p>Por favor confirma tu asistencia antes del <strong>05/07</strong>. El aforo es limitado.</p>
-        <a class="button" href="https://wa.me/51926531441?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Emmanuel%20y%20Danahí.%20😊" target="_blank">
-          Confirmar
-        </a>
-      </section>
+        <div class="container">
+          <h2>CONFIRMAR ASISTENCIA</h2>
+          <img src="assets/copas.jpg" class="copas-image">
+          <form id="rsvpForm">
+            <input type="text" name="entry.424670241" id="nombre" placeholder="Tu nombre" required>
+            
+            <select name="entry.1952426920" id="respuesta" required>
+              <option value="" disabled selected>¿Podrás asistir?</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="Por confirmar">Por confirmar</option>
+            </select>
+            
+            <a type="submit" class="button">Confirmar</a>
+            <p>Por favor confirma tu asistencia antes del <strong>05/07</strong>. El aforo es limitado.</p>
+    </form>
+  </div>
+</section>
       
       <div class="footer fade-in-section">
         <p>Te esperamos</p>
@@ -165,6 +176,33 @@
         isPlaying = !isPlaying;
       }
     </script>
+    <script>
+document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Datos del formulario
+  const nombre = document.getElementById("nombre").value;
+  const respuesta = document.getElementById("respuesta").value;
+
+  // Construye el cuerpo de la solicitud
+  const formData = new FormData();
+  formData.append("entry.424670241", nombre);
+  formData.append("entry.1952426920", respuesta);
+
+  // Enviar al formulario de Google
+  // https://docs.google.com/forms/d/e/1FAIpQLScCKqlKXe4O8S4p1G3botSHZlnqMPDQ19sLvknC7zVQ_U_vGQ/viewform?usp=header
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLScCKqlKXe4O8S4p1G3botSHZlnqMPDQ19sLvknC7zVQ_U_vGQ/formResponse?pli=1", {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  }).then(() => {
+    // Luego de enviar, redirige a WhatsApp con nombre
+    const mensaje = `Hola! Soy ${nombre} y mi respuesta es: ${respuesta}.`;
+    const whatsappURL = `https://wa.me/51926531441?text=${encodeURIComponent(mensaje)}`;
+    window.location.href = whatsappURL;
+  });
+});
+</script>
 
 
 
