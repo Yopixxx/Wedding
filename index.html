@@ -7,6 +7,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+<audio id="musicaFondo" src="assets/cancion.mp3" autoplay loop></audio>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const musica = document.getElementById("musicaFondo");
+    const iniciarMusica = () => {
+      musica.play();
+      document.removeEventListener('click', iniciarMusica);
+      document.removeEventListener('touchstart', iniciarMusica);
+    };
+    document.addEventListener('click', iniciarMusica);
+    document.addEventListener('touchstart', iniciarMusica);
+  });
+</script>
 <body>
   <div class="container">
     <!-- Hero / Portada -->
