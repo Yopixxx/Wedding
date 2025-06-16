@@ -168,20 +168,25 @@ h2 {
   max-width: 300px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-.boton-corazon {
+.boton-audio {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  background-color: #8b5e3c;
   border: none;
-  font-size: 2rem;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 999;
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  opacity: 0.7;
 }
 
-.boton-corazon:hover {
-  transform: scale(1.2);
+.boton-audio:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 #cuentas {

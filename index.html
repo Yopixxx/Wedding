@@ -11,9 +11,8 @@
   <source src="assets/cancion.mp3" type="audio/mpeg">
   Tu navegador no soporta audio HTML5.
 </audio>
-<button id="audioToggle" class="boton-corazon" onclick="toggleAudio()">
-  ❤️
-</button>
+<button id="audioToggle" class="boton-audio" onclick="toggleAudio()"></button>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -153,22 +152,19 @@
           observer.observe(section);
         });
       </script>
-      <script>
-        const audio = document.getElementById('musicaFondo');
-        const btn = document.getElementById('audioToggle');
-        let isPlaying = true;
+     <script>
+      const audio = document.getElementById('musicaFondo');
+      let isPlaying = true;
 
-        function toggleAudio() {
-          if (isPlaying) {
-            audio.pause();
-            btn.textContent = '🤍';
-          } else {
-            audio.play();
-            btn.textContent = '❤️';
-          }
-          isPlaying = !isPlaying;
+      function toggleAudio() {
+        if (isPlaying) {
+          audio.pause();
+        } else {
+          audio.play();
         }
-      </script>
+        isPlaying = !isPlaying;
+      }
+    </script>
 
 
 
