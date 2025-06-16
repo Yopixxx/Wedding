@@ -7,7 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<audio id="musicaFondo" src="assets/cancion.mp3" autoplay loop></audio>
+<audio id="musicaFondo" autoplay loop>
+  <source src="assets/cancion.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio HTML5.
+</audio>
+<button id="audioToggle" class="boton-corazon" onclick="toggleAudio()">
+  ❤️
+</button>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -147,6 +153,23 @@
           observer.observe(section);
         });
       </script>
+      <script>
+        const audio = document.getElementById('musicaFondo');
+        const btn = document.getElementById('audioToggle');
+        let isPlaying = true;
+
+        function toggleAudio() {
+          if (isPlaying) {
+            audio.pause();
+            btn.textContent = '🤍';
+          } else {
+            audio.play();
+            btn.textContent = '❤️';
+          }
+          isPlaying = !isPlaying;
+        }
+      </script>
+
 
 
       </div>

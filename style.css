@@ -168,6 +168,21 @@ h2 {
   max-width: 300px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+.boton-corazon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+
+.boton-corazon:hover {
+  transform: scale(1.2);
+}
 
 #cuentas {
   margin-top: 1rem;
