@@ -108,16 +108,16 @@
     </section>
       
       <!-- Confirmar asistencia -->
-      <section class="section fade-in-section">
+      <section class="section">
   <div class="container">
-    <h2>CONFIRMA TU ASISTENCIA</h2>
+    <h2>CONFIRMAR ASISTENCIA</h2>
     <img src="assets/copas.jpg" class="copas-image">
     <form id="rsvpForm">
       <input type="text" name="entry.424670241" id="nombre" placeholder="Escribe tu nombre" required>
       
       <select name="entry.1952426920" id="respuesta" required>
         <option value="" disabled selected>¿Podrás asistir?</option>
-        <option value="Sí">Sí</option>
+        <option value="Si">Si</option>
         <option value="No">No</option>
         <option value="Por confirmar">Por confirmar</option>
       </select>
@@ -198,12 +198,12 @@ document.getElementById("rsvpForm").addEventListener("submit", function(e) {
   }).then(() => {
     let mensaje = "";
 
-    if (respuesta === "Sí") {
+    if (respuesta === "Si") {
       mensaje = `Hola! Soy ${nombre} y confirmo mi asistencia a la boda de Emmanuel y Danahí. ¡Nos vemos allí! 🎉`;
     } else if (respuesta === "No") {
       mensaje = `Hola! Soy ${nombre} y lamento no poder asistir a la boda de Emmanuel y Danahí. Les deseo lo mejor. 💖`;
     } else if (respuesta === "Por confirmar") {
-      mensaje = `Hola! Soy ${nombre} y aún estoy por confirmar mi asistencia a la boda de Emmanuel y Danahí. ¡Les aviso pronto!Antes del 05/07 😊`;
+      mensaje = `Hola! Soy ${nombre} y aún estoy por confirmar mi asistencia a la boda de Emmanuel y Danahí. ¡Les aviso pronto! 😊`;
     } else {
       mensaje = `Hola! Soy ${nombre} y esta es mi respuesta: ${respuesta}.`;
     }
