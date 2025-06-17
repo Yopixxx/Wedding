@@ -123,7 +123,7 @@ h2 {
   width: 300px;
   height: 150px;
   /* background-image: url('assets/ticketdorado.png'); */
-  background-color: #8b5e3c;
+  background-color: #967358bd;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -247,8 +247,8 @@ input, textarea {
 
 .footer {
   padding: 4px 0;
-  font-size: 0.9rem;
-  color: #aaa;
+  font-size: 1.5rem;
+  color: #c0b3a9;
   /* background-color: #f2e8dc; */
 }
 
