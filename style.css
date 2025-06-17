@@ -305,6 +305,15 @@ input, textarea {
   margin: 1rem auto;
   opacity: 0.6;
 }
+.rings-image {
+  width: 60%;
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0rem auto;
+  margin-top: -50px;
+  opacity: 0.6;
+}
 
 @keyframes latido {
   0%, 100% {
@@ -368,8 +377,30 @@ input, textarea {
   z-index: 0;
 }
 
+.centro-decorada {
+  position: relative;
+  overflow: hidden;
+}
+
+.centro-decorada::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 1700px; /* ajusta a tu gusto */
+  height: 250px;
+  transform: translateY(-100%) rotate(-17deg);
+  background-image: url('assets/olivo3.jpg'); /* o cualquier imagen */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+  opacity: 0.4; /* opcional */
+  z-index: 0;
+}
+
 .decoracion-lateral-derecha {
   opacity: 0.45; /* Ajusta el nivel según lo tenue que lo desees */
+  width: 270px;
 }
 
 
