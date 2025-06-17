@@ -369,7 +369,7 @@ input, textarea {
   width: 1150px; /* ajusta a tu gusto */
   height: 120px;
   transform: translateY(-100%) rotate(-17deg);
-  background-image: url('assets/olivo2.jpg'); /* o cualquier imagen */
+  /* background-image: url('assets/olivo2.jpg'); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top left;
@@ -386,11 +386,11 @@ input, textarea {
   content: "";
   position: absolute;
   top: 0;
-  left: 80px;
-  width: 1700px; /* ajusta a tu gusto */
+  left: 210px;
+  width: 1600px; /* ajusta a tu gusto */
   height: 250px;
   transform: translateY(-100%) rotate(-17deg);
-  background-image: url('assets/olivo3.jpg'); /* o cualquier imagen */
+  background-image: url('assets/olivo3.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top left;
